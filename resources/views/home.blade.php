@@ -18,7 +18,7 @@
                     <div class="area-img-catalog">
                         <img class="img_buku img-fluid" src="https://ebook.erlanggaonline.co.id/cover/C3086411100.jpg" alt="logo.png">
                     </div>
-                    <a href="https://e-library.erlanggaonline.co.id/info_product/detail/3086411100" target="_blank" class="btn btn-catalog btn-blue-ebook btn-block ">Detail</a>
+                    <a href="/detail" class="btn btn-catalog btn-blue-ebook btn-block ">Detail</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
                     <div class="area-img-catalog">
                         <img class="img_buku img-fluid" src="https://ebook.erlanggaonline.co.id/cover/C3086411100.jpg" alt="logo.png">
                     </div>
-                    <a href="https://e-library.erlanggaonline.co.id/info_product/detail/3086411100" target="_blank" class="btn btn-catalog btn-blue-ebook btn-block ">Detail</a>
+                    <a href="/detail" class="btn btn-catalog btn-blue-ebook btn-block ">Detail</a>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                     <div class="area-img-catalog">
                         <img class="img_buku img-fluid" src="https://ebook.erlanggaonline.co.id/cover/C3086411100.jpg" alt="logo.png">
                     </div>
-                    <a href="https://e-library.erlanggaonline.co.id/info_product/detail/3086411100" target="_blank" class="btn btn-catalog btn-blue-ebook btn-block">Detail</a>
+                    <a href="/detail" class="btn btn-catalog btn-blue-ebook btn-block">Detail</a>
                 </div>
             </div>
         </div>
