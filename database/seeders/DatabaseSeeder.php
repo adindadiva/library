@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Book;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -68,8 +69,27 @@ class DatabaseSeeder extends Seeder
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas sequi illum obcaecati? Nemo et cum suscipit repellat nulla architecto ipsa aliquam tempore, quos aperiam sequi sed impedit nobis velit exercitationem, nisi commodi quibusdam earum? Minima modi aut sint sed repellendus.',
             'tahun' => 2019,
             'image' => 'https://picsum.photos/400/300'
-
         ]);
 
+        User::create([
+            'first_name' => 'Jeon',
+            'last_name' => 'Jungkook',
+            'email' => 'jeonjungkook@gmail.com',
+            'password' => '12345',
+        ]);
+
+        User::create([
+            'first_name' => 'Noel',
+            'last_name' => 'Abian',
+            'email' => 'noelabian@gmail.com',
+            'password' => '12345',
+        ]);
+
+        User::create([
+            'first_name' => 'Sabrina',
+            'last_name' => 'Zahra',
+            'email' => 'sabrinazhra@gmail.com',
+            'password' => '12345',
+        ]);
     }
 }

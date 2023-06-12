@@ -33,3 +33,6 @@ Route::get('/pinjam', function () {
 Route::get('/peminjaman', function () {
     return view('peminjaman');
 });
+Route::get('/login', function () {
+    return view('login');
+});
