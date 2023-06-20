@@ -34,5 +34,8 @@ Route::get('/peminjaman', function () {
     return view('peminjaman');
 });
 Route::get('/login', function () {
-    return view('login');
+    return view('form.login');
+});
+Route::get('/register', function () {
+    return view('form.signin');
 });
