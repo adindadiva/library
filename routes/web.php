@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\PeminjamanController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Book;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+Route::get('/katalog', function () {
+    return view('katalog', [
+        'books' => Book::all()
+    ]);
+});
+
+Route::get('/detail/{book:id}', [BookController::class, 'show']);
+
+Route::get('/pinjam', function () {
+    return view('pinjam');
+});
+Route::get('/peminjaman', function () {
+    return view('peminjaman');
+});
+Route::get('/login', function () {
+    return view('form.login');
+});
+Route::get('/register', function () {
+    return view('form.signin');
 });
