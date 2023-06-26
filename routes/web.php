@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\PeminjamanController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Book;
 
@@ -33,9 +34,17 @@ Route::get('/pinjam', function () {
 Route::get('/peminjaman', function () {
     return view('peminjaman');
 });
-Route::get('/login', function () {
-    return view('form.login');
+Route::controller(AuthController::class)->group(function()
+{
+    Route::get('register', 'register');
+    Route::get('login', 'login');
+    Route::post('registerPost', 'register_post')->name('registerPost');
 });
-Route::get('/register', function () {
-    return view('form.signin');
-});
+
+
+// Route::get('/login', function () {
+//     return view('form.login');
+// });
+// Route::get('/register', function () {
+//     return view('form.signin');
+// });
