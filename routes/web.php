@@ -40,8 +40,21 @@ Route::controller(AuthController::class)->group(function()
     Route::get('login', 'login');
     Route::post('registerPost', 'register_post')->name('registerPost');
 });
-
-
+Route::get('/buku', function () {
+    return view('index');
+});
+Route::get('/keranjang', function () {
+    return view('index');
+});
+Route::get('/livewire', function () {
+    return view('buku');
+});
+Route::get('/livewire', function () {
+    return view('kategori');
+});
+Route::get('/livewire', function () {
+    return view('keranjang');
+});
 // Route::get('/login', function () {
 //     return view('form.login');
 // });
