@@ -24,9 +24,10 @@ class PeminjamanSeeder extends Seeder
 
             $user = User::create([
                 'name' => $faker->name(),
+                'username' => $faker->userName(),
                 'email' => $faker->email(),
                 'password' => bcrypt('123123123'),
-            ])->assignRole('peminjam');;
+            ]);
 
             $peminjaman = Peminjaman::create([
                 'kode_pinjam' => random_int(100000000, 999999999),

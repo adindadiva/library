@@ -13,9 +13,9 @@ class Penerbit extends Model
     protected $fillable = ['nama', 'slug'];
 
     // relation
-    public function buku()
+    public function book()
     {
-        return $this->hasMany(Buku::class);
+        return $this->hasMany(Book::class);
     }
 
     // mutator
