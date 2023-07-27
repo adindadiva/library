@@ -40,6 +40,9 @@ Route::controller(AuthController::class)->group(function()
     Route::get('login', 'login');
     Route::post('registerPost', 'register_post')->name('registerPost');
 });
+Route::get('user', function () {
+    return view('user');
+});
 
 
 // Route::get('/login', function () {
