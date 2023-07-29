@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\DetailPeminjaman;
 use App\Models\Peminjaman;
 use App\Models\User;
 use Carbon\Carbon;
@@ -39,6 +40,11 @@ class PeminjamanSeeder extends Seeder
                 'tanggal_pinjam' => $tanggal_pinjam,
                 'tanggal_kembali' => $tanggal_kembali,
                 'tanggal_pengembalian' => $tanggal_pengembalian
+            ]);
+
+            DetailPeminjaman::create([
+                'peminjaman_id' => $peminjaman->id,
+                'buku_id' => random_int(1,7)
             ]);
         }
     }
