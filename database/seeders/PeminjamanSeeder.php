@@ -42,7 +42,6 @@ class PeminjamanSeeder extends Seeder
                 'tanggal_pengembalian' => $tanggal_pengembalian
             ]);
 
-            
             DetailPeminjaman::create([
                 'peminjaman_id' => $peminjaman->id,
                 'buku_id' => random_int(1,7)
