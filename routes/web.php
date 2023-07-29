@@ -43,6 +43,9 @@ Route::controller(AuthController::class)->group(function()
 Route::get('user', function () {
     return view('user');
 });
+Route::get('admin', function () {
+    return view('layout.main');
+});
 
 
 // Route::get('/login', function () {
