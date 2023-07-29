@@ -1,4 +1,4 @@
-@extends('admin-1/app')
+@extends('admin-1/home')
 @section('title', 'User')
 @section('active-user', 'active')
 

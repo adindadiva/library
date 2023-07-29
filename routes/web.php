@@ -3,6 +3,7 @@
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Petugas\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Book;
 
@@ -31,8 +32,12 @@ Route::get('/', function () {
 //     return view('user');
 // });
 Route::get('admin', function () {
-    return view('admin.index');
+    return view('petugas.dashboard.index');
 });
+
+Route::get('/category', CategoryController::class);
+
+
 
 
 // Route::get('/login', function () {
