@@ -65,7 +65,6 @@ class Category extends Component
 
     public function destroy(ModelsCategory $category)
     {
-
         $book = Book::where('category_id', $category->id)->get();
         foreach ($book as $key => $value) {
             $value->update([
@@ -77,7 +76,7 @@ class Category extends Component
 
         session()->flash('sukses', 'Data berhasil dihapus');
 
-        $this->format();
+        $this->format();    
     }
     public function render()
     {

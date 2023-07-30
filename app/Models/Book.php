@@ -16,4 +16,25 @@ class Book extends Model
     {
         return $this->belongsTo(Category::class);
     }
+    public function penerbit()
+    {
+        return $this->belongsTo(Penerbit::class);
+    }
+
+
+    public function book()
+    {
+        return $this->hasMany(DetailPeminjaman::class);
+    }
+
+    // mutator
+    public function setJudulAttribute($value)
+    {
+        $this->attributes['judul'] = ucfirst($value);
+    }
+   
+    public function setPenulisAttribute($value)
+    {
+        $this->attributes['penulis'] = ucfirst($value);
+    }
 }
