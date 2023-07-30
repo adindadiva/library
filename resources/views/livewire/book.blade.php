@@ -3,10 +3,10 @@
 
         @include('admin-1/flash')
 
-        {{-- @include('petugas/book/create')
-        @include('petugas/book/edit')
-        @include('petugas/book/delete')
-        @include('petugas/book/show') --}}
+        {{-- @include('petugas/book/create') --}}
+        {{-- @include('petugas/book/edit') --}}
+        {{-- @include('petugas/book/delete') --}}
+        {{-- @include('petugas/book/show') --}}
 
         <div class="card">
             <div class="card-header">
@@ -34,7 +34,7 @@
                                 <th width="10%">No</th>
                                 <th>Sampul</th>
                                 <th>Judul</th>
-                                <th>Penulis</th>
+                                <th>Author</th>
                                 <th>Kategori</th>
                                 <th width="15%">Aksi</th>
                             </tr>
@@ -46,8 +46,8 @@
                                     <td><img src="/storage/{{ $item->image }}" alt="{{ $item->judul }}" width="60"
                                             height="80"></td>
                                     <td>{{ $item->judul }}</td>
-                                    <td>{{ $item->penulis }}</td>
-                                    <td>{{ $item->category }}</td>
+                                    <td>{{ $item->author }}</td>
+                                    <td>{{ $item->category->name }}</td>
                                     <td>
                                         <div class="btn-group">
                                             <span wire:click="show({{ $item->id }})"
@@ -67,6 +67,10 @@
             @endif
         </div>
         <!-- /.card -->
+
+        {{-- <div class="row justify-content-center">
+            {{ $buku->links() }}
+        </div> --}}
 
         @if ($book->isEmpty())
             <div class="card">
