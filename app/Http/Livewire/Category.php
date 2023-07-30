@@ -77,7 +77,7 @@ class Category extends Component
 
         session()->flash('sukses', 'Data berhasil dihapus');
 
-        $this->format();
+        $this->format();    
     }
     public function render()
     {
