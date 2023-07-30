@@ -22,8 +22,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="./">Rumah Baca</a>
-                <a class="navbar-brand hidden" href="./"><img src="{{ asset('style/images/logo2.png') }}"
-                        alt="Logo"></a>
+                <a class="navbar-brand hidden" ></a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
