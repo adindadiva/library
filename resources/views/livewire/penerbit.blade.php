@@ -3,9 +3,9 @@
     <div class="col-md-12">
         @include('admin-1/flash')
 
-        <!-- @include('petugas/penerbit/create')
+        @include('petugas/penerbit/create')
         @include('petugas/penerbit/edit')
-        @include('petugas/penerbit/delete') -->
+        @include('petugas/penerbit/delete')
 
         <div class="card">
             <div class="card-header">

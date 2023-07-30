@@ -1,30 +1,24 @@
 <?php
 
-namespace App\Http\Livewire\Petugas;
+namespace App\Http\Livewire;
 
 use App\Models\Book;
 use App\Models\Penerbit as ModelsPenerbit;
 use Livewire\Component;
-use Livewire\WithPagination;
 use Illuminate\Support\Str;
 
 class Penerbit extends Component
 {
-    use WithPagination;
-    // protected $paginationTheme = 'bootstrap';
-
-    public $create, $edit, $delete;
-    public $nama, $penerbit_id;
-
+    public $create, $nama, $edit, $penerbit_id, $delete;
     protected $rules = [
-        'nama' => 'required',
+        'nama' => 'required|min:5',
     ];
-
     public function create()
     {
+        $this->format();
+        
         $this->create = true;
     }
-
     public function store()
     {
         $this->validate();
@@ -34,8 +28,9 @@ class Penerbit extends Component
             'slug' => Str::slug($this->nama)
         ]);
 
-        session()->flash('sukses', 'Data berhasil ditambahkan.');
+        session()->flash('sukses', 'Data berhasil ditambahkan');
         $this->format();
+
     }
 
     public function edit(ModelsPenerbit $penerbit)
@@ -56,14 +51,17 @@ class Penerbit extends Component
             'slug' => Str::slug($this->nama)
         ]);
 
-        session()->flash('sukses', 'Data berhasil diubah.');
+        session()->flash('sukses', 'Data berhasil diubah');
+
         $this->format();
     }
 
-    public function delete(ModelsPenerbit $penerbit)
+    public function delete($id)
     {
+        $this->format();
+
         $this->delete = true;
-        $this->penerbit_id = $penerbit->id;
+        $this->penerbit_id = $id;
     }
 
     public function destroy(ModelsPenerbit $penerbit)
@@ -74,31 +72,24 @@ class Penerbit extends Component
                 'penerbit_id' => 1
             ]);
         }
+
         $penerbit->delete();
 
-        session()->flash('sukses', 'Data berhasil dihapus.');
-        $this->format();
-    }
+        session()->flash('sukses', 'Data berhasil dihapus');
 
-    public function updatingSearch()
-    {
-        $this->resetPage();
+        $this->format();    
     }
-
     public function render()
     {
-        
         return view('livewire.penerbit', [
             'penerbit' => ModelsPenerbit::latest()->paginate(5)
         ]);
     }
-
-    public function format()
-    {
+    public function format(){
+        unset($this->nama);
         unset($this->create);
         unset($this->edit);
-        unset($this->delete);
-        unset($this->nama);
         unset($this->penerbit_id);
+        unset($this->delete);
     }
 }
