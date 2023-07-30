@@ -3,6 +3,7 @@
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Petugas\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Book;
 
@@ -18,34 +19,25 @@ use App\Models\Book;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
-Route::get('/katalog', function () {
-    return view('katalog', [
-        'books' => Book::all()
-    ]);
-});
-
-Route::get('/detail/{book:id}', [BookController::class, 'show']);
-
-Route::get('/pinjam', function () {
-    return view('pinjam');
-});
-Route::get('/peminjaman', function () {
-    return view('peminjaman');
-});
-Route::controller(AuthController::class)->group(function()
-{
-    Route::get('register', 'register');
-    Route::get('login', 'login');
-    Route::post('registerPost', 'register_post')->name('registerPost');
-});
-Route::get('user', function () {
-    return view('user');
-});
-Route::get('admin', function () {
     return view('layout.main');
 });
+
+// Route::controller(AuthController::class)->group(function()
+// {
+//     Route::get('register', 'register');
+//     Route::get('login', 'login');
+//     Route::post('registerPost', 'register_post')->name('registerPost');
+// });
+// Route::get('user', function () {
+//     return view('user');
+// });
+Route::get('admin', function () {
+    return view('petugas.dashboard.index');
+});
+
+Route::get('/category', CategoryController::class);
+
+
 
 
 // Route::get('/login', function () {
