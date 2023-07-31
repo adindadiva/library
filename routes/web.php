@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Petugas\BookController as PetugasBookController;
 use App\Http\Controllers\Petugas\CategoryController;
 use App\Http\Controllers\Petugas\PenerbitController;
+use App\Http\Controllers\Petugas\TransaksiController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Book;
 
@@ -42,7 +43,7 @@ Route::get('/category', CategoryController::class);
 
 Route::get('/book', PetugasBookController::class);
 Route::get('/penerbit', PenerbitController::class);
-
+Route::get('/transaksi', TransaksiController::Class);
 
 
 

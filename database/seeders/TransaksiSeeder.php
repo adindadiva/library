@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Transaksi;
 use App\Models\DetailPeminjaman;
 use App\Models\Peminjaman;
 use Illuminate\Database\Seeder;

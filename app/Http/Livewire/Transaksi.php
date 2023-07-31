@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Livewire\Petugas;
+namespace App\Http\Livewire;
 
-use App\Models\Transaksi as ModelsTransaksi;
 use App\Models\Peminjaman;
 use Carbon\Carbon;
 use Livewire\Component;
@@ -110,3 +109,4 @@ class Transaksi extends Component
         $this->selesai_dipinjam = false;
     }
 }
+
