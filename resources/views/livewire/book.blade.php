@@ -46,8 +46,8 @@
                                     <td><img src="/storage/{{ $item->image }}" alt="{{ $item->judul }}" width="60"
                                             height="80"></td>
                                     <td>{{ $item->judul }}</td>
-                                    <td>{{ $item->penulis }}</td>
-                                    <td>{{ $item->category }}</td>
+                                    <td>{{ $item->author }}</td>
+                                    <td>{{ $item->category->name }}</td>
                                     <td>
                                         <div class="btn-group">
                                             <span wire:click="show({{ $item->id }})"
