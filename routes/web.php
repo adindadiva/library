@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\BookController;
+
 use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\Petugas\BookController as PetugasBookController;
+use App\Http\Controllers\Petugas\BookController as BookController;
 use App\Http\Controllers\Petugas\CategoryController;
 use App\Http\Controllers\Petugas\PenerbitController;
 use App\Http\Controllers\Petugas\TransaksiController;
@@ -41,7 +41,10 @@ Route::get('admin', function () {
 Route::get('/category', CategoryController::class);
 
 
+Route::get('/book', BookController::class);
+
 Route::get('/book', PetugasBookController::class);
+
 Route::get('/penerbit', PenerbitController::class);
 Route::get('/transaksi', TransaksiController::Class);
 
