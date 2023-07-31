@@ -11,7 +11,7 @@ class Penerbit extends Component
 {
     public $create, $nama, $edit, $penerbit_id, $delete;
     protected $rules = [
-        'nama' => 'required|min:5',
+        'nama' => 'required',
     ];
     public function create()
     {
@@ -56,22 +56,14 @@ class Penerbit extends Component
         $this->format();
     }
 
-    public function delete($id)
+    public function delete(ModelsPenerbit $penerbit)
     {
-        $this->format();
-
         $this->delete = true;
-        $this->penerbit_id = $id;
+        $this->penerbit_id = $penerbit->id;
     }
 
     public function destroy(ModelsPenerbit $penerbit)
     {
-        $book = Book::where('penerbit_id', $penerbit->id)->get();
-        foreach ($book as $key => $value) {
-            $value->update([
-                'penerbit_id' => 1
-            ]);
-        }
 
         $penerbit->delete();
 
