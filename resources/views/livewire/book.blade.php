@@ -3,7 +3,7 @@
 
         @include('admin-1/flash')
 
-        {{-- @include('petugas/book/create') --}}
+        @include('petugas/book/create')
         {{-- @include('petugas/book/edit') --}}
         {{-- @include('petugas/book/delete') --}}
         {{-- @include('petugas/book/show') --}}
@@ -11,21 +11,9 @@
         <div class="card">
             <div class="card-header">
                 <span wire:click="create" class="btn btn-sm btn-primary">Tambah</span>
-
-                <div class="card-tools">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                        <input wire:model="search" type="text" name="table_search" class="form-control float-right"
-                            placeholder="Search">
-
-                        <div class="input-group-append">
-                            <button type="submit" class="btn btn-default">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- /.card-header -->
+            {{-- @if ($book->isNotEmpty()) --}}
             @if ($book->isNotEmpty())
                 <div class="card-body table-responsive p-0">
                     <table class="table table-hover text-nowrap">

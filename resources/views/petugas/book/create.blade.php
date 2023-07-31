@@ -19,48 +19,31 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="penulis">Penulis</label>
-                                <input wire:model="penulis" type="text" class="form-control" id="penulis">
-                                @error('penulis')
-                                    <small class="text-danger">{{ $message }}</small>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="stok">Stok</label>
-                                <input wire:model="stok" type="number" class="form-control" id="stok"
-                                    min="1">
-                                @error('stok')
+                                <label for="author">Author</label>
+                                <input wire:model="author" type="text" class="form-control" id="author">
+                                @error('author')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="sampul">Sampul</label>
-                        <input wire:model="sampul" type="file" class="form-control" id="sampul" min="1">
-                        @error('sampul')
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
-                    </div>
-                    <div class="row">
-                        {{-- <div class="col-md-4">
+                    {{-- <div class="row">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="kategori">Kategori</label>
-                                <select wire:model="kategori_id" wire:click="pilihKategori" class="form-control"
-                                    id="kategori">
+                                <label for="category">Kategori</label>
+                                <select wire:model="category_id" wire:click="pilihKategori" class="form-control"
+                                    id="category">
                                     <option selected value="">Pilih Kategori</option>
                                     @foreach ($category as $item)
-                                        <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
                                     @endforeach
                                 </select>
-                                @error('kategori_id')
+                                @error('category_id')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
-                        </div> --}}
-                        {{-- <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label for="penerbit">Penerbit</label>
                                 <select wire:model="penerbit_id" class="form-control" id="penerbit">
@@ -73,8 +56,8 @@
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
-                        </div> --}}
-                    </div>
+                        </div>
+                    </div> --}}
                 </div>
                 <div class="modal-footer justify-content-between">
                     <span wire:click="format" type="button" class="btn btn-default" data-dismiss="modal">Batal</span>

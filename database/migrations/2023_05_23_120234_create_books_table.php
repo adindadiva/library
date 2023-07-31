@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('judul');
             $table->string('author');
             $table->string('penerbit');
-            $table->string('jumlah_halaman');
-            $table->longText('deskripsi');
-            $table->integer('tahun');
+            $table->string('jumlah_halaman')->nullable();
+            $table->longText('deskripsi')->nullable();
+            $table->integer('tahun')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });
