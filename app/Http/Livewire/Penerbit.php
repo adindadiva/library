@@ -65,6 +65,7 @@ class Penerbit extends Component
 
     public function destroy(ModelsPenerbit $penerbit)
     {
+
         $penerbit->delete();
 
         session()->flash('sukses', 'Data berhasil dihapus.');
