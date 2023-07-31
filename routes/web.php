@@ -41,7 +41,6 @@ Route::get('/category', CategoryController::class);
 
 
 Route::get('/book', PetugasBookController::class);
-=======
 Route::get('/penerbit', PenerbitController::class);
 
 
